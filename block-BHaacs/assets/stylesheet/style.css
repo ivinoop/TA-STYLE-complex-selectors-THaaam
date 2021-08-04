@@ -1,0 +1,514 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* General */
+
+html {
+  font-size: 16px;
+}
+
+body {
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding-bottom: 20rem;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-22 {
+  flex: 0 1 22%;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.jse {
+  justify-content: space-evenly;
+}
+
+.jsb {
+  justify-content: space-between;
+}
+
+.jcc {
+  justify-content: center;
+}
+
+.aic {
+  align-items: center;
+}
+
+.ais {
+  align-items: stretch;
+}
+
+.tac {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  background-color: #fff;
+  display: inline-block;
+  border-radius: 0.6rem;
+}
+
+/* Custom */
+
+:root {
+  --primary: #58BFC2;
+  --table: #3D9EA1;
+  --head-text: #314276;
+  --body-text: #6D80AD;
+}
+
+/* Header */
+
+header {
+  background-color: var(--primary);
+}
+
+.navbar li { 
+ margin-right: 1.2rem;  
+}
+
+.logo, .navbar a {
+  color: #fff;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.navbar a {
+  font-size: 1.3rem;
+}
+
+/* Hero */
+
+.hero {
+  background-color: var(--primary);
+  padding-bottom: 22.8rem;
+}
+
+.hero-text {
+  text-align: center;
+}
+
+h1 {
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.hero-btn a {
+  color: var(--head-text);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.hero-image {
+  position: absolute;
+  transform: translateX(-50%);
+  right: -20%;
+  /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+  /* box-shadow: rgb(149 157 165 / 20%) -13px -9px 24px; */
+  object-fit: cover;
+}
+
+.hero-btn {
+  position: relative;
+  z-index: 2;
+  top: 1.3rem;
+  padding: 0.8rem 4rem;
+}
+
+/* File Types */
+
+.file-types {
+  margin-top: 15rem;
+}
+
+.file-types img {
+  margin: 1rem;
+}
+
+.all-types {
+  text-align: center;
+}
+
+.file-type p {
+  color: #BDC8E0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.file-types-line {
+  height: 0.1rem;
+  width: 70rem;
+  background-color: #BDC8E0;
+}
+
+/* Monitor */
+
+.monitor {
+  margin-top: 2rem;
+}
+
+.monitor-text h2 {
+  color: var(--head-text);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.4rem;
+}
+
+.monitor-text p {
+  color: var(--body-text);
+  margin-bottom: 1.4rem;
+  font-size: 1.1rem;
+}
+
+.learn-more {
+  padding: 0.5rem 2rem;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius:0;
+  font-weight: 600;
+  position: relative;
+  height: 2.4rem;
+  background-color: var(--primary);
+  cursor: pointer;
+}
+
+.learn-more::before {
+  content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+	  border-top: 1.2rem solid transparent;
+	  border-left: 1.2rem solid #fff;
+	  border-bottom: 1.2rem solid transparent;
+}
+
+.learn-more::after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 0;
+  border-top: 1.2rem solid transparent;
+  border-left: 1.2rem solid var(--primary);
+  border-bottom: 1.2rem solid transparent;
+}
+
+.learn-more a {
+  color: #fff;
+}
+
+/* Table */ 
+
+.table {
+  margin-top: 3rem;
+}
+
+.table h3 {
+  font-size: 2rem;
+  color: var(--head-text);
+  font-weight: 700;
+}
+
+/* Table */
+
+table {
+  max-width: 90rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+  border: 0.08rem solid #d7d8da;
+  outline: none;
+}
+
+tr, td {
+  border: 0.08rem solid #dadbdd;
+}
+
+.main-row td {
+  border: 0.1rem solid var(--table);
+}
+
+tr, td {
+  padding: 0.7rem 5rem;
+}
+
+td {
+  color: #88898d;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.main-row {
+  background-color: var(--table)!important ;
+}
+
+.main-row td {
+  color: #fff;
+}
+
+tr:nth-child(odd) {
+  background-color: #D5E4E5;
+}
+
+/* Pricing */
+
+.pricing {
+  margin-top: 4rem;
+}
+
+.pricing h3 {
+  color: var(--head-text);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.pricing p { 
+  color: #000;
+  font-weight: 700;
+  margin: 1rem;
+}
+
+.toggle {
+  margin-top: 1rem;
+}
+
+.toggle-bar {
+  background-color: #BBECEB;
+  height: 2rem;
+  width: 4.6rem;
+  border-radius: 6rem;
+  position: relative;
+}
+
+.toggle-btn {
+  background-color: var(--primary);
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 50%;
+  position: absolute;
+  left: 44px;
+}
+
+/* Pricing */
+
+.pricing {
+  margin-top: 2rem;
+}
+
+.price-cards {
+  margin-top: 2rem;
+}
+
+.basic, .popular {
+  padding: 1.5rem 3rem 2rem 2rem;
+  border: 0.2rem solid #e8e8e9;
+  margin: 1rem;
+  border-radius: 0.8rem;
+}
+
+.basic li, .popular li {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.times-li {
+  color: #8e8ed0;
+}
+
+.price-cards h3 {
+  margin-bottom: 1.5rem;
+}
+
+.price-cards p, .price-cards h4 {
+  color: var(--body-text);
+}
+
+.price-cards p {
+  font-weight: 400;
+}
+
+hr {
+  border: 0.1rem solid #e8e8e9;
+  background-color: #e8e8e9;
+  margin: 2rem 0;
+  width: 18rem;
+}
+
+.price-cards p::first-letter {
+  color: var(--primary);
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.price-cards span {
+  color: var(--primary);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-right: 0.2rem;
+}
+
+.fa-check {
+  color: var(--primary);
+}
+
+.fa-times {
+  color: red;
+}
+
+.fa-check, .fa-times {
+  margin-right: 0.7rem;
+}
+
+.pricing-btn {
+  padding: 0.4rem 4rem;
+  border: 0.1rem solid #bcbcca;
+  display: block;
+  margin-top: 2rem;
+  border-radius: 0.6rem;
+}
+
+.price-cards a {
+  color: var(--head-text);
+  font-weight: 600;
+}
+
+.popular-btn {
+  background-color: var(--primary);
+  border-radius: 0.6rem;
+}
+
+.popular-btn a {
+  color: #fff;
+}
+
+/* CTA */
+
+.cta {
+  margin-top: 4rem;
+}
+
+.cta-box {
+  padding: 4rem 6rem;
+  background-color: var(--primary);
+  border-radius: 2rem;
+}
+
+.cta h2 {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.cta-btn {
+  padding: 0.4rem 2.5rem;
+}
+
+.cta-btn a {
+  color: var(--head-text);
+}
+
+/* Footer */ 
+
+.footer h3 {
+  color: var(--head-text);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer p, .footer a {
+  color: var(--body-text);
+  margin: 1rem 0;
+}
+
+.footer li {
+  margin: 0.4rem 0;
+}
+
+.social-icons {
+  margin-top: 2rem;
+}
+
+.footer i {
+  color: #fff;
+}
+
+.icon-wrapper {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--primary);
+  margin-right: 1rem;
+}
